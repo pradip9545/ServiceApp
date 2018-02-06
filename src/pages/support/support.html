@@ -1,0 +1,79 @@
+<!--
+  Generated template for the SupportPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Support</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+ <div style="padding-top:40px;">
+   <table width="100%" >
+     <tr>
+       <td align="center" (click)="call()" width="50%">
+          <img src="assets/img/call1.png" style="height:140px;width:140px;">
+          <label>Call Us</label>
+       </td>
+       <td align="center" (click)="mail()" width="50%">
+           <img src="assets/img/email1.png" style="height:140px;width:140px;">
+            <label>Mail Us</label>
+       </td>
+       <tr>
+    </table>
+  </div>
+  <div style="padding-top:160px;">
+      <table width="100%" >
+     <tr>
+       <td align="center" (click)="mail()">
+          <img src="assets/img/breakdown.png" style="height:40px;width:40px;">
+          <label>BreakDown</label>
+       </td >
+          <td align="center" (click)="mail()">
+          <img src="assets/img/spares.png" style="height:40px;width:40px;">
+          <label>Spares</label>
+       </td >
+          <td align="center" (click)="mail()">
+          <img src="assets/img/training.png" style="height:40px;width:40px;">
+          <label>Training</label>
+       </td >
+          <td align="center" (click)="mail()">
+          <img src="assets/img/contact.png" style="height:40px;width:40px;">
+          <label>Contact</label>
+       </td>
+     </tr>
+   </table>
+  </div>
+</ion-content>
+<ion-footer>
+<ion-row>
+    <ion-col></ion-col>
+    <ion-col (click)="fb()">
+     <img src="assets/img/fb.png" style="height:25px;width:25px;">
+    </ion-col>
+    <ion-col (click)="twiter()">
+     <img src="assets/img/twitter.png" style="height:25px;width:25px;">
+    </ion-col>
+
+     <ion-col  (click)="youtube()">
+     <img src="assets/img/youtube.png" style="height:25px;width:25px;">
+    </ion-col>
+     <ion-col (click)="linkdin()">
+     <img src="assets/img/linkedin.png" style="height:25px;width:25px;">
+    </ion-col>
+     <ion-col (click)="google()">
+     <img src="assets/img/gplus.png" style="height:25px;width:25px;">
+    </ion-col>
+     <ion-col></ion-col>
+  </ion-row>
+</ion-footer>

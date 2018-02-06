@@ -1,0 +1,61 @@
+<!--
+  Generated template for the MachineDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar style="height:70px;">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Machine Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#cccccc;">
+  <ion-toolbar no-padding>
+    <ion-searchbar placeholder="Search For Name Or Code" (ionInput)="fetch_machine()" [(ngModel)]="keyword" mode="ios" ></ion-searchbar>
+  </ion-toolbar>
+  <!-- <div *ngIf="code1=='true'">
+<ion-card *ngFor="let res of response" >
+  <span *ngIf="res.image!='http://35.189.36.230'"> <img src="{{res.image}}"/> </span>
+  <ion-card-content style="margin-bottom:0px;">
+   
+   
+  </ion-card-content>
+  <div class="alert alert-success">
+    <p><b>Name:</b> {{res.item_name}}</p>
+   <p><b>Code :</b> {{res.item_code}}</p> 
+   <p><b>Rate :</b> Rs. {{res.rate}}</p> 
+  </div>
+</ion-card>
+  </div> -->
+<div padding>
+    <div *ngIf="code1=='true'">
+<div class="alert alert-danger" *ngFor="let res of response" >
+  <div (click)="current_machine(res)">
+   Code : {{res.item_code}}<br>
+   Name : <b>{{res.item_name}}</b><br>
+   <!-- Rate : <b>Rs.{{res.rate}}</b> -->
+   </div>
+  </div>
+    </div>
+
+    <div *ngIf="code1=='false'">
+    <div class="alert alert-danger">
+      <b>Sorry No Record Found!</b>
+      </div>
+        </div>
+  </div>
+
+<br>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+   <button ion-button full color="primary" (click)="other()">Other</button>
+  </ion-toolbar>
+</ion-footer>

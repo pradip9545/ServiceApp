@@ -1,0 +1,78 @@
+<ion-header>
+
+  <ion-navbar style="height:70px;">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <table width="100%">
+      <tr>
+        <td >
+   <img src="assets/img/logo.png" style="height:80%;width:80%">
+        </td>
+      </tr>
+    </table>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <div style="padding-top:70px;">
+   <table width="100%" >
+     <tr> 
+       <td align="center" (click)="machine_details()" tappable>
+          <img src="assets/img/Machine Details ico.png" style="height:140px;width:140px;"><br><br>
+          <label>Machine Details</label>
+       </td>
+       <!-- <td align="center" (click)="support()" width="50%">
+           <img src="assets/img/21.png" style="height:140px;width:140px;">
+            <label>Support</label>
+       </td> -->
+       <tr>
+    </table>
+  </div>
+  <div style="padding-top:100px;">
+   <table width="100%" >
+     <tr>
+       
+       <td align="center" (click)="breakdown()" width="33.33%" tappable>
+          <img src="assets/img/Breakdown.png" style="height:45px;width:45px;"><br>
+          <label>Breakdown</label>
+       </td >
+          <td align="center" (click)="spares()" width="33.33%" tappable>
+          <img src="assets/img/Spares.png" style="height:45px;width:45px;"><br>
+          <label>Spares</label>
+       </td >
+          <td align="center" (click)="training()" width="33.33%" tappable>
+          <img src="assets/img/Training.png" style="height:45px;width:45px;"><br>
+          <label>Training</label>
+       </td >
+         
+     </tr>
+   </table>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col (click)="fb()" tappable>
+     <i  class="fa fa-facebook" style="font-size: 18px;color: #777;"></i>
+      
+    </ion-col>
+    <ion-col (click)="twiter()" tappable>
+    <i  class="fa fa-twitter" style="font-size: 18px;color: #777;"></i>
+    </ion-col>
+
+     <ion-col  (click)="youtube()">
+     <i  class="fa fa-youtube" style="font-size: 18px;color: #777;"></i>
+    </ion-col>
+     <ion-col (click)="linkdin()" tappable>
+    <i  class="fa fa-linkedin" style="font-size: 18px;color: #777;"></i>
+    </ion-col>
+     <ion-col (click)="google()" tappable>
+    <i  class="fa fa-google" style="font-size: 18px;color: #777;"></i>
+    </ion-col>
+       <ion-col (click)="web()" tappable>
+    <i  class="fa fa-globe" style="font-size: 18px;color: #777;"></i>
+    </ion-col>
+     <ion-col></ion-col>
+  </ion-row>
+</ion-footer>

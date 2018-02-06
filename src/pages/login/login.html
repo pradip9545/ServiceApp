@@ -1,0 +1,19 @@
+
+
+<ion-content padding>
+  <br><br>
+<table width="100%" >
+  <tr >
+    <td align="center">
+  <img src="assets/img/logo.png">
+    </td>
+  </tr>
+</table>
+<br>
+<!-- <p style="text-align:center ; color:#777;font-size:22px;">Enter Login Details</p> -->
+<input type="text" class="form-control well well-sm" placeholder="Username" style="height:45px;" width="100%" [(ngModel)]="username">
+<input type="text" class="form-control well well-sm" placeholder="Password" style="height:45px;" width="100%" [(ngModel)]="password">
+<button type="button" class="btn" style="color:#fff;background-color:#11C1F3;width:100%;height:45px;" (click)="login()">LOGIN</button>
+ <br><br>
+<!-- <span style="color:#777;">Forgot Password? </span><a (click)="forgot()">Click Here</a> -->
+</ion-content>

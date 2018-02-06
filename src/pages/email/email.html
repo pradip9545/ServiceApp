@@ -1,0 +1,64 @@
+
+<ion-header>
+
+  <ion-navbar>
+ <ion-title> Mail Us Now</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+  <div *ngIf="code=='false'">
+<form [formGroup]="userform" (ngSubmit)="onSubmit()">
+ <div class="form-group">
+   <label>Company Name</label>
+   <input  type="text" class="form-control" formControlName="company_name" value="{{company_name}}" disabled>
+ </div>
+   <div *ngIf="userform.controls['company_name'].hasError('required') && userform.controls.company_name.dirty" class="alert alert-danger">
+     Please Enter a Company Name
+ </div>
+      <div class="form-group">
+     <label>Name</label>
+   <input type="text" class="form-control" formControlName="name" >
+     </div>
+     <div class="form-group">
+     <label>Mobile NO</label>
+   <input type="number" class="form-control" formControlName="mobile" >
+    <div *ngIf="userform.controls['mobile'].hasError('pattern') && userform.controls.mobile.dirty" class="alert alert-danger">
+     Please Enter 10 digit mobile no
+ </div>
+     </div>
+   
+     <div class="form-group">
+     <label>Email</label>
+   <input type="text" class="form-control" formControlName="email" value="{{email}}" disabled>
+     </div>
+    
+     <div class="form-group">
+     <label>Reason</label>
+  
+   <select class="form-control" formControlName="reason">
+    <option value="Breakdown">Breakdown</option>
+    <option value="Spares">Spares</option>
+    <option value="Training">Training</option>
+    <option value="Contact">Contact</option>
+    <option value="New Enquiry">New Enquiry</option>
+   
+
+   </select>
+     </div>
+   
+     <div class="form-group">
+     <label>Message</label>
+   <textarea type="text" class="form-control" formControlName="message" rows="6"></textarea>
+     </div>
+      <input type="submit" class="btn btn-primary" [disabled]="!userform.valid" style="width:100%"> 
+
+</form>
+  </div>
+ <div class="alert alert-success" *ngIf="code=='true'">
+  Your request is being serve. Please Wait until this request is resolved.
+ </div>
+</ion-content>
+

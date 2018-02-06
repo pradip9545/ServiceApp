@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Breakdown</ion-title>
+   
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="alert alert-success">
+    <p>Do you want to submit query regarding Breakdown of <b>{{machine_name}}  </b></p><br>
+    <ion-row>
+      <ion-col col-12>
+        
+       <textarea type="text" [(ngModel)]="message" class="form-control well well-sm" rows="5" placeholder="write Breakdown Details here.."></textarea>
+      </ion-col>
+     
+    </ion-row>
+  </div>
+ 
+</ion-content>
+<ion-footer >
+  <ion-row style="padding-left:20px;padding-right:20px;" >
+     <ion-col col-6 >
+  <button ion-button full color="danger" (click)="get()">Yes
+      </button>
+    </ion-col> 
+     <ion-col col-6>
+  <button ion-button full color="danger" (click)="dismiss()">No
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

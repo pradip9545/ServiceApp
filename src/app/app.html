@@ -1,0 +1,56 @@
+<ion-menu [content]="content">
+  <ion-header >
+    <ion-toolbar style="height:70px;">
+      <table width="100%">
+        <tr>
+          <td align="center">
+      <img src="assets/img/logo.png" style="height:60%;width:60%">
+          </td>
+        </tr>
+      </table>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content > 
+     <ion-list no-lines>
+       <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-img src="{{p.icon}}"></ion-img>  
+           <ion-icon   [name]="p.icon" item-left style="height:10px;width:10px;color:#777;"></ion-icon> 
+      <span style="float:left;color:#777;margin-left:0px;">  {{p.title}} </span>
+      </button>  -->
+       <button menuClose ion-item  (click)="home()">
+          <ion-icon   name="ios-home" item-left style="height:10px;width:10px;color:#777;"></ion-icon> 
+       <span style="float:left;color:#777;"> Home</span>
+      </button>
+      <button menuClose ion-item  (click)="machine_details()">
+          <ion-icon   name="analytics" item-left style="height:10px;width:10px;color:#777;"></ion-icon> 
+       <span style="float:left;color:#777;"> Machine Details</span>
+      </button>
+      <button menuClose ion-item  (click)="about()">
+          <ion-icon   name="appname-about" item-left style="height:20px;width:20px;color:#777;"></ion-icon> 
+       <span style="float:left;color:#777;"> About Scantech</span>
+      </button>
+      <button menuClose ion-item  (click)="products()">
+          <ion-icon   name="information-circle" item-left style="height:10px;width:10px;color:#777;"></ion-icon> 
+       <span style="float:left;color:#777;"> Our products</span>
+      </button>
+      <button menuClose ion-item  (click)="technical_support()">
+          <ion-icon   name="cube" item-left style="height:10px;width:10px;color:#777;"></ion-icon> 
+       <span style="float:left;color:#777;"> Technical Support</span>
+      </button>
+       <button menuClose ion-item  (click)="setting()">
+          <ion-icon   name="settings" item-left style="height:10px;width:10px;color:#777;"></ion-icon> 
+       <span style="float:left;color:#777;"> Settings</span>
+      </button>
+       <button menuClose ion-item  (click)="logout()">
+          <ion-icon   name="log-out" item-left style="height:10px;width:10px;color:#777;"></ion-icon> 
+       <span style="float:left;color:#777;"> Logout</span>
+      </button>
+    </ion-list> 
+   
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

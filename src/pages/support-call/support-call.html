@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Call Us Now</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+      <ion-icon name='bulb'></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="alert alert-success" *ngFor="let res of response">
+    <ion-row>
+      <ion-col col-9>
+        Call <b>{{res.scantech_person}}</b> for query regarding <b>{{res.machine_name}}</b>
+      </ion-col>
+      <ion-col col-3>
+        <a style="text-decoration:none" href="tel:{{res.mobile}}">
+        <ion-fab>
+        <button  ion-fab color="danger" right>  <ion-icon name="call"></ion-icon></button>
+      </ion-fab>
+        </a>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+  <button ion-button full color="danger" (click)="dismiss()">Cancel
+      </button>
+</ion-footer>
+

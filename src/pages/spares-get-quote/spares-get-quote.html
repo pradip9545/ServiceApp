@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Get A Quote</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only>
+      <ion-icon name='bulb'></ion-icon>
+    </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="alert alert-success" >
+     <ion-row>
+      <ion-col col-12>
+       <p>Do you want the quotation for <b>{{item_name}} ? </b> <br>
+       <b>Item Code</b> : {{item_code}}<br>
+        <!-- <b>Item Rate</b> : {{item_price | currency:'INR' :true:'1.2-4'}}<br> -->
+      </p>     
+      </ion-col>
+     
+    </ion-row> 
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-row style="padding-left:20px;padding-right:20px;">
+    <ion-col col-6>
+      
+  <button ion-button full
+   color="danger" (click)="send()">Yes
+      </button></ion-col>
+   <ion-col col-6>
+      
+  <button ion-button full
+   color="danger" (click)="dismiss()">No
+      </button></ion-col>
+  
+  </ion-row>
+</ion-footer>

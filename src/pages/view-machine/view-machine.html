@@ -1,0 +1,33 @@
+<!--
+  Generated template for the ViewMachinePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{res.item_name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#cccccc;">
+ <div >
+<ion-card  >
+   <span *ngIf="res.image!='http://114.79.177.138'"> <img src="{{res.image}}"/> </span>
+  <ion-card-content style="margin-bottom:0px;">
+  </ion-card-content>
+  <div class="alert alert-success">
+    <p><b>Name:</b> {{res.item_name}}</p>
+   <p><b>Code :</b> {{res.item_code}}</p> 
+   <!-- <p><b>Rate :</b> Rs. {{res.rate | currency:'INR' :true:'1.2-4'}}</p>  -->
+   <p *ngIf="res.complaint_date!=''"><b>Complaint Date :</b>{{res.complaint_date}}</p> 
+   <p *ngIf="res.warranty_amc_status!=''"><b>Warranty AMC Status:</b>{{res.warranty_amc_status}}</p> 
+   <p *ngIf="res.warranty_expiry_date!=null"><b>Warranty Expiry Date:</b>{{res.warranty_expiry_date}}</p> 
+  </div> 
+</ion-card>
+  </div> 
+</ion-content>
+ 
